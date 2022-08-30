@@ -10,11 +10,15 @@ import 'package:flutter/material.dart';
 class NavigationMenuBar extends StatefulWidget {
   const NavigationMenuBar({
     required this.items,
+    required this.width,
     Key? key,
   }) : super(key: key);
 
   /// The Items on this Bar.
   final List<DesktopMenuItemWidget> items;
+
+  /// The width of the Navigation Menu Bar
+  final double width;
 
   @override
   State<NavigationMenuBar> createState() => _NavigationMenuBarState();
@@ -34,14 +38,18 @@ class _NavigationMenuBarState extends State<NavigationMenuBar> {
       curve: Curves.easeInOut,
       clipBehavior: Clip.antiAliasWithSaveLayer,
       duration: const Duration(),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.start,
-        mainAxisSize: MainAxisSize.max,
-        textBaseline: TextBaseline.alphabetic,
-        textDirection: TextDirection.ltr,
-        verticalDirection: VerticalDirection.down,
-        children: widget.items,
+      child: SizedBox(
+        width: widget.width,
+        height: double.infinity,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.max,
+          textBaseline: TextBaseline.alphabetic,
+          textDirection: TextDirection.ltr,
+          verticalDirection: VerticalDirection.down,
+          children: widget.items,
+        ),
       ),
     );
   }

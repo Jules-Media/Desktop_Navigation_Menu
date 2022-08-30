@@ -14,11 +14,23 @@ import 'package:flutter/material.dart';
 class DesktopNavigationMenu extends StatefulWidget {
   const DesktopNavigationMenu({
     required this.views,
+    this.width,
+    this.withDivider = true,
     Key? key,
   }) : super(key: key);
 
   /// The Views for the Navigation Bar.
   final List<NavigationItem> views;
+
+  /// The width of this Menu.
+  final double? width;
+
+  /// Whether there should be a divider
+  /// between the Navigation Menu and the
+  /// Screen.
+  ///
+  /// Defaults to true.
+  final bool withDivider;
 
   @override
   State<StatefulWidget> createState() => _DesktopNavigationMenuState();
@@ -29,8 +41,13 @@ class _DesktopNavigationMenuState extends State<DesktopNavigationMenu> {
   /// should be shown at a specific moment.
   int _index = 0;
 
+  /// The width of this Screen.
+  double? width;
+
   @override
   Widget build(BuildContext context) {
+    width ??= widget.width ?? MediaQuery.of(context).size.width / 5;
+
     return _body;
   }
 
@@ -76,7 +93,17 @@ class _DesktopNavigationMenuState extends State<DesktopNavigationMenu> {
     return [
       NavigationMenuBar(
         items: _items,
+        width: width!,
       ),
+      // Add Divider if wanted
+      // by the User.
+      () {
+        if (widget.withDivider) {
+          return const VerticalDivider();
+        } else {
+          return Container();
+        }
+      }(),
       Expanded(
         child: _currentView,
       ),
