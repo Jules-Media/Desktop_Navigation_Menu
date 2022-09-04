@@ -1,3 +1,8 @@
+## 0.0.7
+
+* Try Stuff regarding widget resizing.
+
+
 ## 0.0.6
 
 * Remove 'late final' from internal width field

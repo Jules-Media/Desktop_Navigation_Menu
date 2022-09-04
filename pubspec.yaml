@@ -1,6 +1,6 @@
 name: desktop_navigation_menu
 description: Adds a Navigation Menu Drawer that is always shown to your Desktop Application.
-version: 0.0.6
+version: 0.0.7
 repository: https://github.com/Jules-Media/Desktop_Navigation_Menu
 
 environment:

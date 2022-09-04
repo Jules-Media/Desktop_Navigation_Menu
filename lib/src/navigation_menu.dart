@@ -48,7 +48,11 @@ class _DesktopNavigationMenuState extends State<DesktopNavigationMenu> {
   Widget build(BuildContext context) {
     width ??= widget.width ?? MediaQuery.of(context).size.width / 5;
 
-    return _body;
+    return LayoutBuilder(
+      builder: (context, _) {
+        return _body;
+      },
+    );
   }
 
   /// The Body of this Widget.
