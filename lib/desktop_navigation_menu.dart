@@ -6,6 +6,6 @@ library desktop_navigation_menu;
 /// you need to implement
 /// the Navigation Menu Bar.
 
-export 'src/desktop_menu_item.dart';
+export 'src/desktop_menu_item.dart' hide DesktopMenuItemWidget;
 export 'src/navigation_item.dart';
 export 'src/navigation_menu.dart';

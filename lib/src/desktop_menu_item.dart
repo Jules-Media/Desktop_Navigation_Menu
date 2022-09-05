@@ -2,6 +2,7 @@ library desktop_navigation_menu;
 
 import 'package:flutter/material.dart';
 
+@protected
 class DesktopMenuItem {
   const DesktopMenuItem({
     required this.label,

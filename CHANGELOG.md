@@ -1,3 +1,18 @@
+## 0.1.3
+
+* Update exports and public files.
+
+
+## 0.1.2
+
+* Change min width
+
+
+## 0.1.1
+
+* Change min width
+
+
 ## 0.1.0
 
 * Update Widget

@@ -52,8 +52,8 @@ class _DesktopNavigationMenuState extends State<DesktopNavigationMenu> {
     } else {
       final MediaQueryData mq = MediaQuery.of(context);
 
-      if (mq.size.width / 5 < 200) {
-        width = 200;
+      if (mq.size.width / 5 < 150) {
+        width = 150;
       } else {
         width = mq.size.width / 5;
       }
