@@ -33,24 +33,19 @@ class _NavigationMenuBarState extends State<NavigationMenuBar> {
   /// The bar of this
   /// Navigation Bar.
   Widget get _bar {
-    return AnimatedSize(
-      alignment: Alignment.center,
-      curve: Curves.easeInOut,
-      clipBehavior: Clip.antiAliasWithSaveLayer,
-      duration: const Duration(),
-      child: SizedBox(
-        width: widget.width,
-        height: double.infinity,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.start,
-          mainAxisSize: MainAxisSize.max,
-          textBaseline: TextBaseline.alphabetic,
-          textDirection: TextDirection.ltr,
-          verticalDirection: VerticalDirection.down,
-          children: widget.items,
-        ),
+    return SizedBox(
+      width: widget.width,
+      height: double.infinity,
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisSize: MainAxisSize.max,
+        textBaseline: TextBaseline.alphabetic,
+        textDirection: TextDirection.ltr,
+        verticalDirection: VerticalDirection.down,
+        children: widget.items,
       ),
+      // ),
     );
   }
 }

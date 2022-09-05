@@ -1,3 +1,18 @@
+## 0.1.0
+
+* Update Widget
+
+
+## 0.0.9
+
+* Try more stuff
+
+
+## 0.0.8
+
+* Try more stuff concerning resizing.
+
+
 ## 0.0.7
 
 * Try Stuff regarding widget resizing.
