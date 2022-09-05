@@ -1,8 +1,8 @@
 library desktop_navigation_menu;
 
 import 'desktop_menu_item.dart';
-import 'menu_bar.dart';
-import 'navigation_item.dart';
+import 'navigation_menu_bar.dart';
+import 'desktop_navigation_item.dart';
 
 import 'package:flutter/material.dart';
 
@@ -20,7 +20,7 @@ class DesktopNavigationMenu extends StatefulWidget {
   }) : super(key: key);
 
   /// The Views for the Navigation Bar.
-  final List<NavigationItem> views;
+  final List<DesktopNavigationItem> views;
 
   /// The width of this Menu.
   final double? width;
@@ -78,7 +78,7 @@ class _DesktopNavigationMenuState extends State<DesktopNavigationMenu> {
   /// The Items for the [NavigationMenuBar].
   ///
   /// This Method extracts the items of every
-  /// single [NavigationItem] into
+  /// single [DesktopNavigationItem] into
   /// a List of [DesktopMenuItemWidget]
   List<DesktopMenuItemWidget> get _items {
     final List<DesktopMenuItemWidget> list = [];
@@ -86,11 +86,15 @@ class _DesktopNavigationMenuState extends State<DesktopNavigationMenu> {
       /// The current Menu Item in the Iteration
       final DesktopMenuItem menuItem = widget.views[c].menuItem;
 
+      bool isSelected = _index == c;
+
       list.add(
         DesktopMenuItemWidget(
+          isSelected: isSelected,
           label: menuItem.label,
           description: menuItem.description,
           icon: menuItem.icon,
+          activeIcon: menuItem.activeIcon,
           onTap: () => _indexChanged(c),
         ),
       );

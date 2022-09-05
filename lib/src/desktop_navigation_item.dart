@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 
 /// Represents an Item in the
 /// Navigation Bar and it's corresponding Screen.
-class NavigationItem {
-  const NavigationItem({
+class DesktopNavigationItem {
+  const DesktopNavigationItem({
     required this.menuItem,
     required this.screen,
   });

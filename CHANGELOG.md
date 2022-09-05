@@ -1,3 +1,13 @@
+## 0.1.5
+
+* Bugfix
+
+
+## 0.1.4
+
+* Add Active Icon
+
+
 ## 0.1.3
 
 * Update exports and public files.

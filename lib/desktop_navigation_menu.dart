@@ -7,5 +7,5 @@ library desktop_navigation_menu;
 /// the Navigation Menu Bar.
 
 export 'src/desktop_menu_item.dart' hide DesktopMenuItemWidget;
-export 'src/navigation_item.dart';
+export 'src/desktop_navigation_item.dart';
 export 'src/navigation_menu.dart';
